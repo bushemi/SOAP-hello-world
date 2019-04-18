@@ -1,6 +1,6 @@
 package client;
 
-import pack.HelloWorldServer;
+import server.HelloWorldServer;
 
 import java.net.URL;
 
@@ -12,7 +12,7 @@ public class HelloWorldClient {
     public static void main(String[] args) {
         try {
             URL url = new URL("http://localhost:9876/hw?wsdl");
-            QName qname = new QName("http://pack/",
+            QName qname = new QName("http://server/",
                     "HelloWorldServerImplService");
 
             Service service = Service.create(url, qname);
